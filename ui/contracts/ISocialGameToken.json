@@ -1,0 +1,541 @@
+{
+  "contractName": "ISocialGameToken",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "tokenURI_",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "gameId",
+          "type": "uint256"
+        }
+      ],
+      "name": "enterGame",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "ticket_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "gameCompleted",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"tokenURI_\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"gameId\",\"type\":\"uint256\"}],\"name\":\"enterGame\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"ticket_\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"gameCompleted\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"victaphu\",\"details\":\"An interface for token management of a single Token Registry for all Social Games Used by the {SocialGame} to manage tokens issued by players of the game and make games as complete Intended usage: Track the tickets issued for all Social Change Games\",\"kind\":\"dev\",\"methods\":{\"enterGame(address,string,uint256)\":{\"details\":\"called when a participant enters a game This function is intended to be called by the SocialGame upon registration of a participant for the game. The result is minting of the token\"},\"gameCompleted()\":{\"details\":\"called when a particular game is completed. \"}},\"title\":\"Social Change Game Token Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Smart Contract developed for the Harmony One Round 2 Hackathon on Gitcoin\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ISocialGameToken.sol\":\"ISocialGameToken\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/ISocialGameToken.sol\":{\"keccak256\":\"0xa884ebcb182551915d87a4cdc09241980f8ae2dff812a76fd3e208bd4d2103fd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2f73021310a197e56816ea2d93f186de7e35295dbb2be3bd6c737515c38a7561\",\"dweb:/ipfs/QmQgzqP52iomZRhai8YPGwgHmWcYuVSRayfAtSYS36gW4r\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\n/**\r\n * @title Social Change Game Token Interface\r\n * @notice Smart Contract developed for the Harmony One Round 2 Hackathon on Gitcoin\r\n * @dev An interface for token management of a single Token Registry for all Social Games\r\n * Used by the {SocialGame} to manage tokens issued by players of the game and make\r\n * games as complete\r\n *\r\n * Intended usage: Track the tickets issued for all Social Change Games\r\n *\r\n * @author victaphu\r\n */\r\ninterface ISocialGameToken {\r\n\r\n    /**\r\n     * @dev called when a participant enters a game\r\n     * This function is intended to be called by the SocialGame\r\n     * upon registration of a participant for the game. The result is\r\n     * minting of the token\r\n     */\r\n    function enterGame(\r\n        address player,\r\n        string memory tokenURI_,\r\n        uint256 gameId\r\n    ) external returns (uint256 ticket_);\r\n\r\n\r\n    /**\r\n     * @dev called when a particular game is completed. \r\n     */\r\n    function gameCompleted() external;\r\n}\r\n",
+  "sourcePath": "D:\\job\\NFT\\social-harmony\\truffle\\contracts\\ISocialGameToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ISocialGameToken.sol",
+    "exportedSymbols": {
+      "ISocialGameToken": [
+        2537
+      ]
+    },
+    "id": 2538,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2519,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:16"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISocialGameToken",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2520,
+          "nodeType": "StructuredDocumentation",
+          "src": "69:440:16",
+          "text": " @title Social Change Game Token Interface\n @notice Smart Contract developed for the Harmony One Round 2 Hackathon on Gitcoin\n @dev An interface for token management of a single Token Registry for all Social Games\n Used by the {SocialGame} to manage tokens issued by players of the game and make\n games as complete\n Intended usage: Track the tickets issued for all Social Change Games\n @author victaphu"
+        },
+        "fullyImplemented": false,
+        "id": 2537,
+        "linearizedBaseContracts": [
+          2537
+        ],
+        "name": "ISocialGameToken",
+        "nameLocation": "521:16:16",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 2521,
+              "nodeType": "StructuredDocumentation",
+              "src": "547:230:16",
+              "text": " @dev called when a participant enters a game\n This function is intended to be called by the SocialGame\n upon registration of a participant for the game. The result is\n minting of the token"
+            },
+            "functionSelector": "e66a1ab1",
+            "id": 2532,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "enterGame",
+            "nameLocation": "792:9:16",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2523,
+                  "mutability": "mutable",
+                  "name": "player",
+                  "nameLocation": "820:6:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "812:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2522,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "812:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2525,
+                  "mutability": "mutable",
+                  "name": "tokenURI_",
+                  "nameLocation": "851:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "837:23:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2524,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "837:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2527,
+                  "mutability": "mutable",
+                  "name": "gameId",
+                  "nameLocation": "879:6:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "871:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2526,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "871:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "801:91:16"
+            },
+            "returnParameters": {
+              "id": 2531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2530,
+                  "mutability": "mutable",
+                  "name": "ticket_",
+                  "nameLocation": "919:7:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "911:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2529,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "911:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "910:17:16"
+            },
+            "scope": 2537,
+            "src": "783:145:16",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2533,
+              "nodeType": "StructuredDocumentation",
+              "src": "938:70:16",
+              "text": " @dev called when a particular game is completed. "
+            },
+            "functionSelector": "4d699f00",
+            "id": 2536,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gameCompleted",
+            "nameLocation": "1023:13:16",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2534,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1036:2:16"
+            },
+            "returnParameters": {
+              "id": 2535,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1047:0:16"
+            },
+            "scope": 2537,
+            "src": "1014:34:16",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2538,
+        "src": "511:540:16",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1020:16"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/ISocialGameToken.sol",
+    "exportedSymbols": {
+      "ISocialGameToken": [
+        2537
+      ]
+    },
+    "id": 2538,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2519,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:16"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISocialGameToken",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2520,
+          "nodeType": "StructuredDocumentation",
+          "src": "69:440:16",
+          "text": " @title Social Change Game Token Interface\n @notice Smart Contract developed for the Harmony One Round 2 Hackathon on Gitcoin\n @dev An interface for token management of a single Token Registry for all Social Games\n Used by the {SocialGame} to manage tokens issued by players of the game and make\n games as complete\n Intended usage: Track the tickets issued for all Social Change Games\n @author victaphu"
+        },
+        "fullyImplemented": false,
+        "id": 2537,
+        "linearizedBaseContracts": [
+          2537
+        ],
+        "name": "ISocialGameToken",
+        "nameLocation": "521:16:16",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 2521,
+              "nodeType": "StructuredDocumentation",
+              "src": "547:230:16",
+              "text": " @dev called when a participant enters a game\n This function is intended to be called by the SocialGame\n upon registration of a participant for the game. The result is\n minting of the token"
+            },
+            "functionSelector": "e66a1ab1",
+            "id": 2532,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "enterGame",
+            "nameLocation": "792:9:16",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2523,
+                  "mutability": "mutable",
+                  "name": "player",
+                  "nameLocation": "820:6:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "812:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2522,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "812:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2525,
+                  "mutability": "mutable",
+                  "name": "tokenURI_",
+                  "nameLocation": "851:9:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "837:23:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2524,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "837:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2527,
+                  "mutability": "mutable",
+                  "name": "gameId",
+                  "nameLocation": "879:6:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "871:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2526,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "871:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "801:91:16"
+            },
+            "returnParameters": {
+              "id": 2531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2530,
+                  "mutability": "mutable",
+                  "name": "ticket_",
+                  "nameLocation": "919:7:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2532,
+                  "src": "911:15:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2529,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "911:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "910:17:16"
+            },
+            "scope": 2537,
+            "src": "783:145:16",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2533,
+              "nodeType": "StructuredDocumentation",
+              "src": "938:70:16",
+              "text": " @dev called when a particular game is completed. "
+            },
+            "functionSelector": "4d699f00",
+            "id": 2536,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gameCompleted",
+            "nameLocation": "1023:13:16",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2534,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1036:2:16"
+            },
+            "returnParameters": {
+              "id": 2535,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1047:0:16"
+            },
+            "scope": 2537,
+            "src": "1014:34:16",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2538,
+        "src": "511:540:16",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1020:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-02-14T20:28:14.327Z",
+  "devdoc": {
+    "author": "victaphu",
+    "details": "An interface for token management of a single Token Registry for all Social Games Used by the {SocialGame} to manage tokens issued by players of the game and make games as complete Intended usage: Track the tickets issued for all Social Change Games",
+    "kind": "dev",
+    "methods": {
+      "enterGame(address,string,uint256)": {
+        "details": "called when a participant enters a game This function is intended to be called by the SocialGame upon registration of a participant for the game. The result is minting of the token"
+      },
+      "gameCompleted()": {
+        "details": "called when a particular game is completed. "
+      }
+    },
+    "title": "Social Change Game Token Interface",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "Smart Contract developed for the Harmony One Round 2 Hackathon on Gitcoin",
+    "version": 1
+  }
+}

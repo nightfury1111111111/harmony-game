@@ -1,0 +1,20 @@
+{
+  "organisation": "BLK LUV org",
+  "organisationBanner": "/charities/1.png",
+  "description": "BLK LUV org (BLK = 💙) is a blockchain non-profit dedicated to blockchain diversity. ",
+  "story": "BLK LUV org (BLK = 💙) is a blockchain non-profit dedicated to blockchain diversity. We use web 3.0 blockchain NFT technology to solve real world issue. Although the $46.5 billion Emergency Rental Assistance Program has paid out tens of billions of dollars to help avert an eviction crisis, millions of people are still seeking rental assistance as inflation continues to increase the cost of living.\n\nThe National Housing Law Project, in a survey last fall of nearly 120 legal aid attorneys and civil rights advocates, found that 86% of respondents reported cases in which landlords either refused to take assistance or accepted the money and still moved to evict tenants. The survey also found a significant increase in cases of landlords lying in court to evict tenants and illegally locking them out.",
+  "icon": "",
+  "heroImages": [
+    "/charities/1.banner.jpg",
+    "https://picsum.photos/id/501/256/144",
+    "https://picsum.photos/id/502/256/144",
+    "https://picsum.photos/id/503/256/144"
+  ], 
+  "publicKey": "0x9da7a39a97fc980584def8ffb68e2ef27142a655",
+  "contactDetails": {
+    "email": "info@blkluv.org",
+    "site": "https://blkluv.org",
+    "twitter": "https://twitter.com/blkluvorg",
+    "facebook": "https://www.facebook.com/blkluvorg/"
+  }
+}

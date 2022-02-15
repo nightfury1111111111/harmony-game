@@ -1,0 +1,16 @@
+{
+  "name": "seeder",
+  "version": "1.0.0",
+  "description": "seeder for social harmony game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "victaphu",
+  "license": "ISC",
+  "dependencies": {
+    "bn.js": "^4.12.0",
+    "dotenv": "^10.0.0",
+    "web3": "^1.4.0"
+  }
+}
